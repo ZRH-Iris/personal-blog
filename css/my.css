@@ -183,3 +183,7 @@ body:has(#indexCard) .navbar-fixed,body:has(#indexCard) .navbar-fixed nav#headNa
   .pasture-energy-card span{font-size:.51rem}
   .pasture-energy-card strong{font-size:.56rem}
 }
+
+
+/* 当前作品集内容较少：关闭全站搜索入口与搜索弹窗。 */
+a[href="#searchModal"],.site-search-nav,nav .nav-menu .site-search-nav,#searchModal{display:none!important}
