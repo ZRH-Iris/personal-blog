@@ -156,3 +156,30 @@ body:has(#indexCard) .navbar-fixed,body:has(#indexCard) .navbar-fixed nav#headNa
 
 /* 首页右侧：头像是主角，元气提示改成小而清楚的贴纸卡。 */
 .lazy-hero-figure,.pasture-sheep-card{display:none!important}.pasture-energy-card{position:absolute;z-index:4;right:-1%;bottom:4%;width:118px;margin:0;padding:6px 6px 8px;border:5px solid #fffdf6;border-radius:20px;background:#fffdf6;box-shadow:0 13px 27px rgba(73,113,66,.16);overflow:hidden;transform:rotate(5deg);animation:energy-float 6.5s ease-in-out infinite}.pasture-energy-card img{display:block;width:100%;aspect-ratio:1;object-fit:cover;object-position:center;border-radius:12px;background:#f8d788}.pasture-energy-card figcaption{padding:7px 3px 1px;text-align:center;line-height:1.28}.pasture-energy-card span{display:block;margin-bottom:2px;color:#d9774a!important;-webkit-text-fill-color:#d9774a!important;font-size:.61rem;font-weight:800;letter-spacing:.08em}.pasture-energy-card strong{display:block;color:#2f6942!important;-webkit-text-fill-color:#2f6942!important;font-size:.68rem;line-height:1.35;font-weight:800}@keyframes energy-float{0%,100%{transform:rotate(5deg) translate3d(0,0,0)}50%{transform:rotate(4deg) translate3d(0,-6px,0)}}.pasture-trait-static{grid-template-columns:54px 1fr!important;cursor:default}.pasture-trait-static:hover{color:var(--ink)!important;border-color:var(--line)!important;transform:none!important;box-shadow:0 5px 18px rgba(73,113,66,.06)!important}@media(max-width:700px){.pasture-energy-card{right:0;left:auto;top:auto;bottom:0;width:96px;border-width:4px;border-radius:17px}.pasture-energy-card img{border-radius:10px}.pasture-energy-card figcaption{padding:5px 1px 0}.pasture-energy-card span{font-size:.55rem}.pasture-energy-card strong{font-size:.61rem}.pasture-trait-static{grid-template-columns:46px 1fr!important}}
+
+
+/* 三端适配：首页头像与「今日元气」卡（桌面 / 平板 / 手机）。 */
+@media (min-width:701px) and (max-width:1024px){
+  .pasture-home{min-height:540px;padding:82px 28px 94px}
+  .pasture-container{grid-template-columns:1.05fr .95fr;gap:16px;max-width:900px}
+  .pasture-copy h1{font-size:clamp(3.5rem,7vw,4.6rem)}
+  .pasture-lead{max-width:400px;font-size:1rem}
+  .pasture-portrait-wrap{min-height:335px}
+  .pasture-sun{width:270px;height:270px}
+  .pasture-avatar-ring{width:270px;height:270px}
+  .pasture-energy-card{right:0;bottom:2%;width:108px;border-width:4px;border-radius:18px}
+  .pasture-energy-card img{border-radius:11px}
+  .pasture-energy-card figcaption{padding:6px 2px 0}
+  .pasture-energy-card span{font-size:.57rem}
+  .pasture-energy-card strong{font-size:.64rem}
+}
+@media (max-width:420px){
+  .pasture-home{padding-left:15px;padding-right:15px}
+  .pasture-portrait-wrap{min-height:272px}
+  .pasture-avatar-ring{width:210px;height:210px}
+  .pasture-sun{width:214px;height:214px}
+  .pasture-energy-card{right:1%;bottom:-1%;width:88px}
+  .pasture-energy-card figcaption{padding-top:4px}
+  .pasture-energy-card span{font-size:.51rem}
+  .pasture-energy-card strong{font-size:.56rem}
+}
